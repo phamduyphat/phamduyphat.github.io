@@ -227,7 +227,7 @@
   overflow: hidden;
   touch-action: manipulation;
   color: #000;
-  background-color: #def;
+  background-color: rgba(221, 238, 255, 0.616);
   opacity: var(--opacity, 1);
   transition: transform 0.15s linear 0s;
 }
@@ -460,7 +460,7 @@
 }
 
 .project {
-  background: #def;
+  background: rgba(221, 238, 255, 0.616);
   border-radius: 16px;
   overflow: hidden;
   opacity: var(--opacity, 1);
