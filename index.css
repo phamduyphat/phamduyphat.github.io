@@ -561,8 +561,8 @@ body:not(.touch-device) #background {
   position: absolute
   align-items: center;
   justify-content: center;
-  /* margin-top: -35vh; */
-  vertical-align: bottom;
+  margin-top: -35vh;
+  /* vertical-align: bottom; */
 }
 
 .footer-inner {
