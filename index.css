@@ -184,6 +184,9 @@
   .content .projects {
     display: flex !important;
   }
+  #excluded-mobile-aspect-ratio.widget{
+    display: none;
+  }
 }
 
 .widget {
