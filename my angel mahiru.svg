@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 870 120">
+  <defs>
+    <style>
+      @keyframes dash {
+        0% {
+          stroke-dashoffset: calc(var(--len) + 1px)
+        }
+
+        to {
+          stroke-dashoffset: 0
+        }
+      }
+
+      @keyframes stroke-width {
+        0% {
+          stroke-width: 3px
+        }
+
+        to {
+          stroke-width: 12px
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      @keyframes dot {
+        0% {
+          r: 0
+        }
+
+        to {
+          r: var(--r)
+        }
+      }
+
+      .stroke {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        stroke-dasharray: calc(var(--len) + 1px);
+        stroke-dashoffset: calc(var(--len) + 1px);
+        animation: dash 1s cubic-bezier(.8, 0, .2, 1) var(--delay) forwards, stroke-width 1s cubic-bezier(.8, 0, .2, 1) calc(var(--delay) + .5s) forwards, fade .2s linear calc(var(--delay) + 0s) forwards
+      }
+    </style>
+  </defs>
+  <g id="text">
+    //m
+    <path d="M 3 75 L 3 26" class="stroke" style="--len:727px;--delay:0.3s" />
+    <path d="M 3 46 C 5 18 39 20 39 46 L 39 75" class="stroke" style="--len:727px;--delay:0.55s" />
+    <path d="M 39 46 C 41 18 75 20 75 46 L 75 75" class="stroke" style="--len:727px;--delay:0.8s" />
+    //y
+    <path d="M 92 27 L 114 75" class="stroke" style="--len:727px;--delay:0.8s" />
+    <path d="M 138 26 L 104 99" class="stroke" style="--len:727px;--delay:1.0s" />
+    //a
+    <path d="M 230 51 A 1 1 0 0 1 180 51 A 1 1 0 0 1 230 51 L 230 75" class="stroke" style="--len:727px;--delay:1.3s" />
+    //n
+    <path d="M 251 75 L 251 26" class="stroke" style="--len:727px;--delay:1.5s" />
+    <path d="M 251 46 C 253.444 18 295 20 295 46 L 295 75" class="stroke" style="--len:727px;--delay:1.7s" />
+    //g
+    <path d="M 365 54 C 358.464 85.956 317 81 315 54 C 314 15 367.906 17.148 365 54 L 365 73 C 362 97 335.569 104.417 319 86" class="stroke" style="--len:727px;--delay:1.9s" />
+    //e
+    <path d="M 383 50 L 428 50 C 430.261 20.842 386.205 14.22 383 50 C 382.642 74.144 405.82 83.583 424 70" class="stroke" style="--len:727px;--delay:2.2s" />
+    //l
+    <path d="M 445 3 L 445 63 C 445.334 74.332 454 76 458 75" class="stroke" style="--len:727px;--delay:2.4s" />
+    //m
+    <path d="M 503 75 L 503 26" class="stroke" style="--len:727px;--delay:2.6s" />
+    <path d="M 503 46 C 505 18 539 20 539 46 L 539 75" class="stroke" style="--len:727px;--delay:2.85s" />
+    <path d="M 539 46 C 541 18 575 20 575 46 L 575 75" class="stroke" style="--len:727px;--delay:3.1s" />
+    //a
+    <path d="M 645 51 A 1 1 0 0 1 595 51 A 1 1 0 0 1 645 51 L 645 75" class="stroke" style="--len:727px;--delay:3.3s" />
+    //h
+    <path d="M 666 3 L 666 75" class="stroke" style="--len:727px;--delay:3.5s" />
+    <path d="M 666 44 C 673.142 16.905 707.356 21.711 711 44 L 711 75" class="stroke" style="--len:727px;--delay:3.7s" />
+    //i
+    <path d="M 736 27 L 736 75 M 736 7 L 736.0001 7" class="stroke" style="--len:727px;--delay:3.9s" />
+    //<path class="stroke" style="--len:727px;--delay:0.6s" />
+    //r
+    <path d="M 762 27 L 762 75" class="stroke" style="--len:727px;--delay:4.1s" />
+    <path d="M 762 45 C 765 27 779 24 787 26" class="stroke" style="--len:727px;--delay:4.3s" />
+    //u
+    <path d="M 805 26 L 805 59 C 807.126 78.945 842 84 849 59" class="stroke" style="--len:727px; --delay:4.5s" />
+    <path d="M 849 26 L 849 75" class="stroke" style="--len:727px; --delay:4.85s" />
+  </g>
+</svg>

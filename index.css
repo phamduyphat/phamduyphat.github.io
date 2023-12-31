@@ -528,7 +528,7 @@
   position: fixed;
   z-index: -2;
   background-color: #000;
-  filter: blur(clamp(0px, calc(50px * var(--scroll-y-percent, 0) + -5px), 10px)) brightness(0.7);
+  filter: blur(clamp(0px, calc(50px * var(--scroll-y-percent, 0) + -5px), 10px)) brightness(0.45);
   inset: -30px;
 }
 
