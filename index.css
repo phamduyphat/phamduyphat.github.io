@@ -561,7 +561,8 @@ body:not(.touch-device) #background {
   height: 15vh;
   font-size: 20px;
   display: flex;
-  position: absolute;
+  /* to be displayed at the center of the screen */
+  /* position: absolute;  */
   align-items: center;
   justify-content: center;
   margin-top: -35vh;
