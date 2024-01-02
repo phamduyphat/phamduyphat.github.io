@@ -516,6 +516,16 @@
   justify-content: flex-end;
 }
 
+.project-stars {
+  /* flex: 1; */
+  justify-content: flex-start;
+}
+
+.project-forks {
+  flex: 1;
+  justify-content: flex-start;
+}
+
 .project-language-color {
   height: 0.6em;
   width: 0.6em;

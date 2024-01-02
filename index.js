@@ -91,19 +91,20 @@ window.addEventListener('touchstart', () => {
 document.querySelectorAll('.project').forEach(async (project) => {
     const href = project.querySelector('a').getAttribute('href');
     if (!href.startsWith('https://github.com/')) return;
-    const { star, fork } = await (await fetch(`/repos/${href.slice(19)}`)).json();
+    const stats = await (await fetch(`https://api.github.com/repos/${href.slice(19)}`)).json();
 
     project.querySelector('.project-metas').insertAdjacentHTML('afterbegin', `
     <div class="project-meta project-stars">
         <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"></path>
-        </svg>${star ?? '-'}</div>
+        </svg>${stats.stargazers_count ?? '-'}</div>
     <div class="project-meta project-forks">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em">
             <g>
                 <path fill="none" d="M0 0h24v24H0z"></path>
                 <path d="M7.105 15.21A3.001 3.001 0 1 1 5 15.17V8.83a3.001 3.001 0 1 1 2 0V12c.836-.628 1.874-1 3-1h4a3.001 3.001 0 0 0 2.895-2.21 3.001 3.001 0 1 1 2.032.064A5.001 5.001 0 0 1 14 13h-4a3.001 3.001 0 0 0-2.895 2.21z"></path>
             </g>
-        </svg>${fork ?? '-'}</div>`);
+        </svg>${stats.forks_count ?? '-'}</div>`);
+    console.log("injected");
 })
